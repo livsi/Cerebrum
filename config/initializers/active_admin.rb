@@ -101,7 +101,7 @@ ActiveAdmin.setup do |config|
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
   require './lib/index.rb'
-  require './lib/tabbed_navigation.rb'
+  #require './lib/tabbed_navigation.rb'
   require './lib/breadcrumb_helper.rb'
   require './lib/show.rb'
 end
