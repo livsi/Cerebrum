@@ -1,11 +1,11 @@
 # encoding: utf-8
 ActiveAdmin.register_page "Find client" do
 
-  menu :label => "Find client", :parent => "Clients"
+  menu :label => proc{ I18n.t("active_admin.client_find") }, :parent => "Clients"
 
   content do
-    panel "Find client" do
-      para "Поиск клиента опросом роутеров"
+    panel I18n.t("active_admin.client_find") do
+      para "Тут будет форма"
     end
   end
 

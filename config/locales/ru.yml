@@ -15,6 +15,7 @@ ru:
     admin: "Админ"
     client: "Клиент"
     clients: "Клиенты"
+    client_find: "Поиск клиента"
     housings: "Жкх и Дезы"
     departments: "Отделы"
     hosts: "Оборудование"
