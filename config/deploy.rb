@@ -44,23 +44,23 @@ after 'deploy:update_code', :roles => :app do
   run "echo 'rvm use 1.9.3' > #{current_release}/.rvmrc"
 end
 
-#namespace :doon do
-#  task :commit do
-#    system('git add .')
-#    system("git commit -am 'Deploy at #{Time.now}'")
-#    system('git push')
-#  end
-#
-#  ztask = ARGV[0].split(':')[1]
-#
-#  if ztask && search_task(ztask.to_sym).nil? && ENV['cmd']
-#    t = task 'tmp', :roles => [ztask.to_sym], do
-#      puts capture(ENV['cmd'])
-#    end
-#    t.call
-#    exit
-#  end
-#end
+namespace :doon do
+  task :commit do
+    system('git add .')
+    system("git commit -am 'Deploy at #{Time.now}'")
+    system('git push')
+  end
+
+  ztask = ARGV[0].split(':')[1]
+
+  if ztask && search_task(ztask.to_sym).nil? && ENV['cmd']
+    t = task 'tmp', :roles => [ztask.to_sym] do
+      puts capture(ENV['cmd'])
+    end
+    t.call
+    exit
+  end
+end
 
 # Далее идут правила для перезапуска unicorn. Их стоит просто принять на веру - они работают.
 # В случае с Rails 3 приложениями стоит заменять bundle exec unicorn_rails на bundle exec unicorn
