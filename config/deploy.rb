@@ -24,8 +24,8 @@ set :rvm_ruby_string, '1.9.3' # Это указание на то, какой Ru
 set :rvm_type, :user # Указывает на то, что мы будем использовать rvm, установленный у пользователя, от которого происходит деплой, а не системный rvm.
 
 
-role :web, "vach"                           # Your HTTP server, Apache/etc
-role :app, "vach"                           # This may be the same as your `Web` server
+role :web, "v.gevorkyan@89.255.64.49"                           # Your HTTP server, Apache/etc
+role :app, "v.gevorkyan@89.255.64.49"                           # This may be the same as your `Web` server
 role :db,  "v.gevorkyan@89.255.64.49", :primary => true         # This is where Rails migrations will run
 role :bridge, "v.gevorkyan@89.255.93.158:222", :no_release => true
 role :nagios, "v.gevorkyan@nagios.oblelecom.ru", :no_release => true
