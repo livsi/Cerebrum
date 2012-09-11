@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register Service do
-  menu :label => "Услуги", :parent => "Подключения"  
+  menu :label => "Услуги", :parent => "Orders"
   
  
   scope "Доступные", :in_stock, :default => true 

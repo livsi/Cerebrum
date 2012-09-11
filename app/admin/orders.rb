@@ -1,6 +1,6 @@
 # encoding: utf-8	 
 ActiveAdmin.register Order do
-	menu :label => "Подключения" 
+  menu :label => proc{ I18n.t("active_admin.orders") }
 	
 	scope 'Новые' ,:new_orders, :default => true 
 	scope 'Обработанные', :processed_orders

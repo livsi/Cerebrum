@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register Client do
-  
+  menu :label => proc{ I18n.t("active_admin.clients") }, :priority => 3
   scope :all, :default => true
   scope "Организации", :companys
   scope "Частные", :individuals

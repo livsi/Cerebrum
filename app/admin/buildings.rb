@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register Building, { :sort_order => "name_asc" }  do
-  
+  menu :label => proc{ I18n.t("active_admin.buildings") }, :priority => 2
   
   filter :name, :label => "Дому"
   filter :region, :label => "Региону"

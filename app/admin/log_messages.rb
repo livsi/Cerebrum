@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register LogMessage do
-  menu :label => "Логи", :parent => "Оборудование"  
+  menu :label => "Логи", :parent => "Hosts"
   
   scope :all, :default => true
   scope "Информация", :info_log

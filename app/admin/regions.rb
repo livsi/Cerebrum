@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register Region, { :sort_order => "name_asc" } do
-  
+  menu :label => proc{ I18n.t("active_admin.regions") }, :priority => 5
   
   filter :server, :label => "Сервер" 
   

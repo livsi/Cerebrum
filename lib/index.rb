@@ -3,7 +3,7 @@ module ActiveAdmin
     module Pages  
       class Index < Base
          def title    
-           I18n.t "active_admin.#{self.resource_class.name.downcase.pluralize}", :default => active_admin_config.plural_resource_name
+           I18n.t "active_admin.#{self.resource_class.name.downcase.pluralize}", :default => active_admin_config.plural_resource_label
          end 
       end
     end

@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register Employee, { :sort_order => "position_asc" } do
-  
+  menu :label => proc{ I18n.t("active_admin.employees") }, :priority => 4
   filter :name, :label => "ФИО" 
   filter :department, :label => "Отдел" 
   

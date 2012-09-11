@@ -1,6 +1,6 @@
 # encoding: utf-8
 ActiveAdmin.register Server do
-  menu :label =>  "Серверы", :parent => "Оборудование"
+  menu :label =>  "Серверы", :parent => "Hosts"
   
   filter :name, :label => "Имени"
   filter :hostname
