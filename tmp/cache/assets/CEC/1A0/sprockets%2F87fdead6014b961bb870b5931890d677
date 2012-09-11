@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347362349.6200252:@value{	I"length:EFi4
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347386125.8511062:@value{	I"length:EFi
 I"digest;
-F"%73054ff0781851cf8e72df155fda1e11I"source;
-FI"4
+F"%b65214079bdc770a3efe7f292f7c230cI"source;
+FI"
 /*!
  * jQuery JavaScript Library v1.8.1
  * http://jquery.com/
@@ -21502,35 +21502,6 @@ $.extend( $.ui.tabs.prototype, {
   });
 
 }).call(this);
-(function() {
-
-  jQuery(function() {
-    var services;
-    services = '';
-    return $(".order_services").bind("DOMSubtreeModified", function() {
-      $('.service_select').last().parent().hide();
-      if (services === '') {
-        services = $('.service_select').last().html();
-      }
-      return $(".category_select").change(function() {
-        var cat_sel, category, category_selector, escaped_category, options;
-        category_selector = this;
-        category = $(':selected', category_selector).text();
-        escaped_category = category.replace(/([#;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-        options = $(services).filter("optgroup[label='" + escaped_category + "']").html();
-        cat_sel = $(category_selector).parent().parent();
-        if (options) {
-          $('.service_select', cat_sel).html(options);
-          return $('.service_select', cat_sel).parent().show();
-        } else {
-          $('.service_select', cat_sel).empty();
-          return $('.service_select', cat_sel).parent().hide();
-        }
-      });
-    });
-  });
-
-}).call(this);
 ;
 TI"_version;
-F"%15e198f29f8ba1daced7afab29ec64dc
+F"%a18a73ebca8a052ff689cc537de85353

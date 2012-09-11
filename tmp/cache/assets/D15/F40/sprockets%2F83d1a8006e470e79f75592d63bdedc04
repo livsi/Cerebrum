@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347361935.799519:@value{	I"length:EFiCI"digest;
-F"%b1e541ff5bc2eeaa223ddaf40e3a5c94I"source;
-FI"C/* line 2, ../../../../.rvm/gems/ruby-1.9.3-p194@rails311/gems/activeadmin-0.5.0/app/assets/stylesheets/active_admin/mixins/_icons.css.scss */
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347386124.8998091:@value{	I"length:EFißI"digest;
+F"%ebab50e82ae17acd26936b19757e75f4I"source;
+FI"ß/* line 2, ../../../../.rvm/gems/ruby-1.9.3-p194@rails311/gems/activeadmin-0.5.0/app/assets/stylesheets/active_admin/mixins/_icons.css.scss */
 body.active_admin span.icon {
   vertical-align: middle;
   display: inline-block;
@@ -2730,11 +2730,6 @@ body.active_admin {
   padding: 0;
   color: #323537;
 }
-
-/* line 8, ../../app/assets/stylesheets/active_admin.css.scss */
-.center {
-  text-align: center;
-}
 ;
 FI"_version;
-F"%fcc2a9b25dbaf793fe5e93f1258ddd83
+F"%c4b9cdcdc6104710f877d4ce7358ba0b

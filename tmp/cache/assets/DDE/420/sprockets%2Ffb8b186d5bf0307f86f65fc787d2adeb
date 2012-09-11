@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347361935.7880142:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347386124.885758:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%fcc2a9b25dbaf793fe5e93f1258ddd83I"logical_path;
+F"%c4b9cdcdc6104710f877d4ce7358ba0bI"logical_path;
 FI"active_admin.css;
 FI"pathname;
 FI"7$root/app/assets/stylesheets/active_admin.css.scss;
@@ -9,9 +9,9 @@ FI"content_type;
 FI"text/css;
 FI"
 mtime;
-FI"2012-09-11T14:26:21+04:00;
+FI"2012-09-11T21:09:26+04:00;
 FI"	body;
-FI"C/* line 2, ../../../../.rvm/gems/ruby-1.9.3-p194@rails311/gems/activeadmin-0.5.0/app/assets/stylesheets/active_admin/mixins/_icons.css.scss */
+FI"ß/* line 2, ../../../../.rvm/gems/ruby-1.9.3-p194@rails311/gems/activeadmin-0.5.0/app/assets/stylesheets/active_admin/mixins/_icons.css.scss */
 body.active_admin span.icon {
   vertical-align: middle;
   display: inline-block;
@@ -2741,11 +2741,6 @@ body.active_admin {
   padding: 0;
   color: #323537;
 }
-
-/* line 8, ../../app/assets/stylesheets/active_admin.css.scss */
-.center {
-  text-align: center;
-}
 ;
 FI"asset_paths;
 F[I"7$root/app/assets/stylesheets/active_admin.css.scss;
@@ -2754,9 +2749,9 @@ F[Q{I"	path;
 FI"7$root/app/assets/stylesheets/active_admin.css.scss;
 FI"
 mtime;
-FIu:	Timej!€  Pi:@_zoneI"MSK;
+FIu:	Timeq!€   %:@_zoneI"MSK;
 T:offseti@8I"hexdigest;
-F"%a0a0e28cf497bec4accdb39167048fb3{I"	path;
+F"%75823ea119883c22fbc9ba45e6422863{I"	path;
 FI"{/Users/livsi/.rvm/gems/ruby-1.9.3-p194@rails311/gems/activeadmin-0.5.0/app/assets/stylesheets/active_admin/_mixins.css.scss;
 FI"
 mtime;
