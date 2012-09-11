@@ -1,4 +1,4 @@
-$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Для работы rvm
+#$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Для работы rvm
 require 'rvm/capistrano' # Для работы rvm
 require 'bundler/capistrano' # Для работы bundler.
 require "whenever/capistrano"
@@ -27,12 +27,12 @@ role :web, "v.gevorkyan@89.255.64.49"                           # Your HTTP serv
 role :app, "v.gevorkyan@89.255.64.49"                           # This may be the same as your `Web` server
 role :db,  "v.gevorkyan@89.255.64.49", :primary => true         # This is where Rails migrations will run
 role :bridge, "v.gevorkyan@89.255.93.158:222", :no_release => true
-role :nagios, "v.gevorkyan@nagos.oblelecom.ru", :no_release => true
+role :nagios, "v.gevorkyan@nagios.oblelecom.ru", :no_release => true
 
 set :unicorn_conf, "#{deploy_to}/current/config/unicorn.rb"
 set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
 
-before 'deploy:update', do
+before 'deploy:update' do
   system('git add .')
   system("git commit -am 'Deploy at #{Time.now}'")
   system('git push')  
@@ -44,23 +44,23 @@ after 'deploy:update_code', :roles => :app do
   run "echo 'rvm use 1.9.3' > #{current_release}/.rvmrc"
 end
 
-namespace :doon do   
-  task :commit do
-    system('git add .')
-    system("git commit -am 'Deploy at #{Time.now}'")
-    system('git push')  
-  end
-  
-  ztask = ARGV[0].split(':')[1] 
-  
-  if ztask && search_task(ztask.to_sym).nil? && ENV['cmd']
-    t = task 'tmp', :roles => [ztask.to_sym], do
-      puts capture(ENV['cmd'])
-    end
-    t.call
-    exit
-  end
-end
+#namespace :doon do
+#  task :commit do
+#    system('git add .')
+#    system("git commit -am 'Deploy at #{Time.now}'")
+#    system('git push')
+#  end
+#
+#  ztask = ARGV[0].split(':')[1]
+#
+#  if ztask && search_task(ztask.to_sym).nil? && ENV['cmd']
+#    t = task 'tmp', :roles => [ztask.to_sym], do
+#      puts capture(ENV['cmd'])
+#    end
+#    t.call
+#    exit
+#  end
+#end
 
 # Далее идут правила для перезапуска unicorn. Их стоит просто принять на веру - они работают.
 # В случае с Rails 3 приложениями стоит заменять bundle exec unicorn_rails на bundle exec unicorn
