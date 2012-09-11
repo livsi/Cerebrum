@@ -76,18 +76,18 @@ namespace :deploy do
   end
   task :config_nginx, :roles => :web do
     vhost_template = "
-    upstream #{application}.heelp.me_server {
+    upstream #{application}.obltelecom.ru_server {
       server unix:/srv/#{application}/shared/unicorn.sock fail_timeout=0;
     }
     server {
-        listen #{application}.heelp.me:80;
+        listen #{application}.obltelecom.ru:80;
         client_max_body_size 1G;
-        server_name #{application}.heelp.me;
+        server_name #{application}.obltelecom.ru;
         keepalive_timeout 5;
         root /srv/#{application}/current/public;
-        try_files $uri/index.html $uri.html $uri @#{application}.heelp.me;
-        location @#{application}.heelp.me {
-            proxy_pass http://#{application}.heelp.me_server;
+        try_files $uri/index.html $uri.html $uri @#{application}.obltelecom.ru;
+        location @#{application}.obltelecom.ru {
+            proxy_pass http://#{application}.obltelecom.ru_server;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header Host $http_host;
             proxy_redirect off;
