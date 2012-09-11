@@ -4,11 +4,11 @@ gem 'rails', '3.1.1'
 gem 'mysql2'
 gem 'jquery-rails'
 gem 'rb-fsevent'
-gem 'activeadmin', '0.3.4'
-gem "cancan"
+gem 'activeadmin', '0.5.0'
+gem 'cancan'
 gem 'whenever'
 gem 'net-ping'
-gem "haml"
+gem 'haml'
 
 gem 'daemons'
 gem 'delayed_job_active_record'
@@ -22,6 +22,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
+
 
 gem 'sass-rails',   '~> 3.1.4'
 
@@ -37,6 +38,12 @@ gem 'growl', :group => [:test, :development]
 gem "rspec-rails", :group => [:test, :development]
 
 gem 'therubyracer'
+
+group :development do
+  gem 'linecache19', '0.5.13'
+  gem 'ruby-debug-base19', '0.11.26'
+  gem 'ruby-debug19', :require => 'ruby-debug'
+end
 
 group :test do
   gem "factory_girl_rails"
