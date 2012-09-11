@@ -13,7 +13,7 @@ set :hostname, "heelpme"
 set :rake, 'LOAD_RAILS=1 bundle exec rake'
 
 default_run_options[:pty] = true 
-set :repository, "git@github.com:Vachman/Cerebrum.git"  
+set :repository, "git@github.com:livsi/Cerebrum.git"
 set :branch, "master"
 set :scm, "git"
 set :user, "vachman"  # The server's user for deploys
