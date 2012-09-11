@@ -2,7 +2,7 @@
 require 'rvm/capistrano' # Для работы rvm
 require 'bundler/capistrano' # Для работы bundler.
 require "whenever/capistrano"
-_cset(:whenever_command)      { "bundle exec whenever" }
+set(:whenever_command)      { "bundle exec whenever" }
 
 set :application, "cerebrum"
 set :rails_env, "production"
