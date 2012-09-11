@@ -26,7 +26,7 @@ set :rvm_type, :user # Указывает на то, что мы будем ис
 
 role :web, "vach"                           # Your HTTP server, Apache/etc
 role :app, "vach"                           # This may be the same as your `Web` server
-role :db,  "vach", :primary => true         # This is where Rails migrations will run
+role :db,  "v.gevorkyan@89.255.64.49", :primary => true         # This is where Rails migrations will run
 role :bridge, "v.gevorkyan@89.255.93.158:222", :no_release => true
 role :nagios, "v.gevorkyan@nagios.oblelecom.ru", :no_release => true
 
