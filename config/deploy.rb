@@ -11,6 +11,7 @@ set :nginx_path, "/usr/local/nginx"
 set :use_sudo, false
 set :hostname, "heelpme"
 set :rake, 'LOAD_RAILS=1 bundle exec rake'
+set :rvm_path, '/home/v.gevorkyan/.rvm/'
 
 default_run_options[:pty] = true 
 set :repository, "git@github.com:livsi/Cerebrum.git"
