@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'mysql2'
 gem 'jquery-rails'
-gem 'rb-fsevent'
+gem 'rb-fsevent', '~>0.9.1'
 gem 'activeadmin', '0.5.0'
 gem 'cancan'
 gem 'whenever'
@@ -46,9 +46,9 @@ group :development do
 end
 
 group :test do
-  gem "factory_girl_rails"
-  gem "capybara"
-  gem "guard-rspec"
-  gem "spork", "> 0.9.0.rc"
-  gem "guard-spork"
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'spork', '> 0.9.0.rc'
+  gem 'guard-spork'
 end
