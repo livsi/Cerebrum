@@ -1,0 +1,34 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347369777.065173:@value{	I"length:EFi3I"digest;
+F"%88771cfe4c5f87c26a2b68a42e41b008I"source;
+FI"3(function() {
+
+  jQuery(function() {
+    var services;
+    services = '';
+    return $(".order_services").bind("DOMSubtreeModified", function() {
+      $('.service_select').last().parent().hide();
+      if (services === '') {
+        services = $('.service_select').last().html();
+      }
+      return $(".category_select").change(function() {
+        var cat_sel, category, category_selector, escaped_category, options;
+        category_selector = this;
+        category = $(':selected', category_selector).text();
+        escaped_category = category.replace(/([#;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+        options = $(services).filter("optgroup[label='" + escaped_category + "']").html();
+        cat_sel = $(category_selector).parent().parent();
+        if (options) {
+          $('.service_select', cat_sel).html(options);
+          return $('.service_select', cat_sel).parent().show();
+        } else {
+          $('.service_select', cat_sel).empty();
+          return $('.service_select', cat_sel).parent().hide();
+        }
+      });
+    });
+  });
+
+}).call(this);
+;
+FI"_version;
+F"%b0f8568ecb6f1b119a8d4b460dd19ec1

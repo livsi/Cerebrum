@@ -60,5 +60,5 @@ Cerebrum::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.assets.compile = true
-  config.assets.precompile += %w[active_admin.css active_admin.js active_admin/print.css]
+  config.assets.precompile += %w[active_admin.css active_admin.js]
 end
