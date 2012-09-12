@@ -17,7 +17,7 @@ set :rake, 'LOAD_RAILS=1 bundle exec rake'
 
 default_run_options[:pty] = true 
 set :repository, "git@github.com:livsi/Cerebrum.git"
-set :branch, "master"
+set :branch, "old"
 set :scm, "git"
 #set :user, "vachman"  # The server's user for deploys
 #set :scm_passphrase, "xarakiri"  # The deploy user's password
