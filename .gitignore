@@ -1,4 +1,6 @@
 .DS_Store
+.idea/*
+
 config/database.yml
 .bundle
 db/*.sqlite3
@@ -6,4 +8,7 @@ log/*.log
 tmp/*
 .sass-cache/
 .rvmrc
-.idea/*
+
+public/images/*
+public/javascripts/*
+public/stylesheets/*
