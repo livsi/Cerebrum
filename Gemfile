@@ -27,6 +27,7 @@ gem 'sass-rails',   '~> 3.1.4'
 
 # Deploy with Capistrano
 gem 'capistrano'
+gem 'rvm-capistrano'
 gem 'unicorn'
 
 gem 'snmp'

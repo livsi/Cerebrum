@@ -1,8 +1,11 @@
-$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Для работы rvm
+#$:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Для работы rvm
 require 'rvm/capistrano' # Для работы rvm
 require 'bundler/capistrano' # Для работы bundler.
 require "whenever/capistrano"
-_cset(:whenever_command)      { "bundle exec whenever" }
+
+set(:whenever_command)      { "bundle exec whenever" }
+
+set :rvm_path, '$HOME/.rvm'
 
 set :application, "cerebrum"
 set :rails_env, "production"
@@ -13,11 +16,11 @@ set :hostname, "heelpme"
 set :rake, 'LOAD_RAILS=1 bundle exec rake'
 
 default_run_options[:pty] = true 
-set :repository, "git@github.com:Vachman/Cerebrum.git"  
+set :repository, "git@github.com:livsi/Cerebrum.git"
 set :branch, "master"
 set :scm, "git"
-set :user, "vachman"  # The server's user for deploys
-set :scm_passphrase, "xarakiri"  # The deploy user's password
+#set :user, "vachman"  # The server's user for deploys
+#set :scm_passphrase, "xarakiri"  # The deploy user's password
 
 set :rvm_ruby_string, '1.9.3' # Это указание на то, какой Ruby интерпретатор мы будем использовать.
 set :rvm_type, :user # Указывает на то, что мы будем использовать rvm, установленный у пользователя, от которого происходит деплой, а не системный rvm.
@@ -32,7 +35,7 @@ role :nagios, "v.gevorkyan@nagos.oblelecom.ru", :no_release => true
 set :unicorn_conf, "#{deploy_to}/current/config/unicorn.rb"
 set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
 
-before 'deploy:update', do
+before 'deploy:update' do
   system('git add .')
   system("git commit -am 'Deploy at #{Time.now}'")
   system('git push')  
@@ -54,7 +57,7 @@ namespace :doon do
   ztask = ARGV[0].split(':')[1] 
   
   if ztask && search_task(ztask.to_sym).nil? && ENV['cmd']
-    t = task 'tmp', :roles => [ztask.to_sym], do
+    t = task 'tmp', :roles => [ztask.to_sym] do
       puts capture(ENV['cmd'])
     end
     t.call
