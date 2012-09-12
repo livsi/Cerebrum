@@ -4,6 +4,8 @@ require 'bundler/capistrano' # Для работы bundler.
 require "whenever/capistrano"
 set(:whenever_command)      { "bundle exec whenever" }
 
+set :rvm_path, '$HOME/.rvm'
+
 set :application, "cerebrum"
 set :rails_env, "production"
 set :deploy_to, "/srv/#{application}"

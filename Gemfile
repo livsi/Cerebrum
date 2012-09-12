@@ -4,8 +4,8 @@ gem 'rails', '3.1.1'
 gem 'mysql2'
 gem 'jquery-rails'
 gem 'rb-fsevent', '~>0.9.1'
-gem 'activeadmin', '0.5.0'
-gem 'cancan'
+gem 'activeadmin', '0.3.4'
+gem "cancan"
 gem 'whenever'
 gem 'net-ping'
 gem 'haml'
@@ -28,6 +28,7 @@ gem 'sass-rails',   '~> 3.1.4'
 
 # Deploy with Capistrano
 gem 'capistrano'
+gem 'rvm-capistrano'
 gem 'unicorn'
 
 gem 'snmp'
