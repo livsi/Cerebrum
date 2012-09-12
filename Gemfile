@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1'
 gem 'mysql2'
 gem 'jquery-rails'
-gem 'rb-fsevent'
+gem 'rb-fsevent', '~>0.9.1'
 gem 'activeadmin', '0.3.4'
 gem "cancan"
 gem 'whenever'
