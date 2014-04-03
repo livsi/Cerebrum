@@ -19,7 +19,7 @@ ActiveAdmin.register_page "Dashboard" do
             status_tag "Неизвестно", :title => "Сроду не видели"
           end
         end
-        t.column("Подъедз") { |host|  host.porch }
+        t.column("Подъезд") { |host|  host.porch }
         t.column("Количество логов") do |host|
           host.log_count.to_s
         end

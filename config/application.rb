@@ -40,8 +40,10 @@ module Cerebrum
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
-    # Enable the asset pipeline
     I18n.default_locale = :ru
+    config.i18n.enforce_available_locales = true
+
+    # Enable the asset pipeline
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets

@@ -1,5 +1,7 @@
 class AddDepartmentToEmployee < ActiveRecord::Migration
   def change
-    add_column :employees, :department_id, :integer
+    unless column_exists? :employees, :department_id
+      add_column :employees, :department_id, :integer
+    end
   end
 end

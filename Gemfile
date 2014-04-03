@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
-gem 'mysql2'
+gem 'mysql2', '0.3.15'
 gem 'jquery-rails'
 gem 'rb-fsevent', '~>0.9.1'
-gem 'activeadmin', '0.3.4'
+gem 'activeadmin', '>=0.6.3'
 gem "cancan"
 gem 'whenever'
 gem 'net-ping'
@@ -26,22 +26,22 @@ end
 
 gem 'sass-rails',   '~> 3.1.4'
 
-# Deploy with Capistrano
-gem 'capistrano'
-gem 'rvm-capistrano'
 gem 'unicorn'
 
 gem 'snmp'
 
 gem 'pry' #, :group => :development
 gem 'pry-rails'#, :group => :development
+
 gem 'growl', :group => [:test, :development]
 gem "rspec-rails", :group => [:test, :development]
 
-gem 'therubyracer'
+#gem 'therubyracer'
 
 group :development do
-  gem 'rvm-capistrano'
+  # Deploy with Capistrano
+  #gem 'capistrano'
+  #gem 'rvm-capistrano'
 
   #gem 'linecache19', '0.5.13'
   #gem 'ruby-debug-base19', '0.11.26'

@@ -1,9 +1,11 @@
 class CreateDepartments < ActiveRecord::Migration
   def change
-    create_table :departments do |t|
-      t.string :name
+    unless table_exists? :departments
+      create_table :departments do |t|
+        t.string :name
 
-      t.timestamps
+        t.timestamps
+      end
     end
   end
 end

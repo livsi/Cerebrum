@@ -1,3 +1,16 @@
+Для работы с проектом на локальной машине под Mac Os X:
+
+Нужен rvm с гемсетом из .rvmrc
+
+Для дозагрузки гемов проекта - выполнить из рабочей директории проекта команду
+
+    bundle install
+
+Установка mysql2 может вызывать ошибку - поэтому можно установить гем отдельно
+
+    gem install mysql2 -- --srcdir=/usr/local/mysql/include
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
