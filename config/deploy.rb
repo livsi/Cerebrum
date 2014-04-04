@@ -43,7 +43,7 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:web), in: :sequence, wait: 5 do
-      run "if [ -f #{:unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -USR2 `cat #{unicorn_pid}`; else cd #{deploy_to}/current/ && bundle exec unicorn -c #{unicorn_conf} -E #{rails_env} -D; fi"
+      run "if [ -f #{:unicorn_pid} ] && [ -e /proc/$(cat #{:unicorn_pid}) ]; then kill -USR2 `cat #{:unicorn_pid}`; else cd #{:deploy_to}/current/ && bundle exec unicorn -c #{:unicorn_conf} -E #{:rails_env} -D; fi"
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
     end
@@ -52,7 +52,7 @@ namespace :deploy do
   desc 'Start application'
   task :start do
     on roles(:web), in: :sequence, wait: 5 do
-      run "cd #{:deploy_to}/current/ && bundle exec unicorn -c #{unicorn_conf} -E #{rails_env} -D"
+      run "cd #{:deploy_to}/current/ && bundle exec unicorn -c #{:unicorn_conf} -E #{:rails_env} -D"
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
     end
@@ -61,7 +61,7 @@ namespace :deploy do
   desc 'Stop application'
   task :stop do
     on roles(:web), in: :sequence, wait: 5 do
-      run "if [ -f #{:unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
+      run "if [ -f #{:unicorn_pid} ] && [ -e /proc/$(cat #{:unicorn_pid}) ]; then kill -QUIT `cat #{:unicorn_pid}`; fi"
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
     end
