@@ -36,7 +36,7 @@ gem 'pry-rails'#, :group => :development
 gem 'growl', :group => [:test, :development]
 gem "rspec-rails", :group => [:test, :development]
 
-#gem 'therubyracer'
+gem 'therubyracer'
 
 group :development do
   # Deploy with Capistrano
