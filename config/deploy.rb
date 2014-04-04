@@ -47,7 +47,7 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:web), in: :sequence, wait: 5 do
-      invoke 'unicorn:reload'
+      #invoke 'unicorn:reload'
       #run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -USR2 `cat #{unicorn_pid}`; else cd #{deploy_to}/current/ && bundle exec unicorn -c #{unicorn_conf} -E #{rails_env} -D; fi"
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
