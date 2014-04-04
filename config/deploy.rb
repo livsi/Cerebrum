@@ -46,8 +46,8 @@ namespace :deploy do
 
   desc 'Restart application'
   task :restart do
+    invoke 'unicorn:reload'
     on roles(:web), in: :sequence, wait: 5 do
-      execute :rake, 'unicorn:reload'
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
     end
