@@ -1,4 +1,4 @@
-deploy_to  = "/srv/cerebrum"
+deploy_to  = "/srv/brain"
 
 rails_root = "#{:deploy_to}/current"
 working_directory rails_root
