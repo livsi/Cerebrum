@@ -36,6 +36,7 @@ gem 'pry-rails'#, :group => :development
 gem 'growl', :group => [:test, :development]
 gem "rspec-rails", :group => [:test, :development]
 
+gem 'execjs'
 gem 'therubyracer'
 
 group :development do
