@@ -1,19 +1,19 @@
 deploy_to  = "/srv/cerebrum"
 
-rails_root = "#{deploy_to}/current"
+rails_root = "#{:deploy_to}/current"
 working_directory rails_root
 
-pid_file   = "#{deploy_to}/shared/pids/unicorn.pid"
+pid_file   = "#{:deploy_to}/shared/pids/unicorn.pid"
 pid pid_file
 old_pid    = pid_file + '.oldbin'
-err_log    = "#{rails_root}/log/unicorn_error.log"
-log_file   = "#{rails_root}/log/unicorn.log"
+err_log    = "#{:rails_root}/log/unicorn_error.log"
+log_file   = "#{:rails_root}/log/unicorn.log"
 
 stderr_path err_log
 stdout_path log_file
 
 
-socket_file= "#{deploy_to}/shared/unicorn.sock"
+socket_file= "#{:deploy_to}/shared/unicorn.sock"
 listen socket_file, :backlog => 1024
 
 worker_processes 1 # Здесь тоже в зависимости от нагрузки, погодных условий и текущей фазы луны
@@ -27,7 +27,7 @@ preload_app true # Мастер процесс загружает приложе
 GC.copy_on_write_friendly = true if GC.respond_to?(:copy_on_write_friendly=) # Решительно не уверен, что значит эта строка, но я решил ее оставить.
 
 before_exec do |server|
-  #ENV["BUNDLE_GEMFILE"] = "#{rails_root}/Gemfile"
+  #ENV["BUNDLE_GEMFILE"] = "#{:rails_root}/Gemfile"
   ENV["BUNDLE_GEMFILE"] = File.join(rails_root, 'Gemfile')
 end
 
