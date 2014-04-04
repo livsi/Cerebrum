@@ -35,11 +35,33 @@ set :pty, true
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
+set :unicorn_conf, "#{deploy_to}/current/config/unicorn.rb"
+set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
+
 namespace :deploy do
 
   desc 'Restart application'
   task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
+    on roles(:web), in: :sequence, wait: 5 do
+      run "if [ -f #{:unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -USR2 `cat #{unicorn_pid}`; else cd #{deploy_to}/current/ && bundle exec unicorn -c #{unicorn_conf} -E #{rails_env} -D; fi"
+      # Your restart mechanism here, for example:
+      # execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+
+  desc 'Start application'
+  task :start do
+    on roles(:web), in: :sequence, wait: 5 do
+      run "cd #{:deploy_to}/current/ && bundle exec unicorn -c #{unicorn_conf} -E #{rails_env} -D"
+      # Your restart mechanism here, for example:
+      # execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+
+  desc 'Stop application'
+  task :stop do
+    on roles(:web), in: :sequence, wait: 5 do
+      run "if [ -f #{:unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
     end
