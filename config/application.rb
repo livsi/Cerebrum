@@ -35,7 +35,7 @@ module Cerebrum
     # config.i18n.default_locale = :de
     config.i18n.fallbacks = true
     I18n.default_locale = :ru
-    I18n.enforce_available_locales = true
+    I18n.config.enforce_available_locales = true
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
