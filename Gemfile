@@ -37,7 +37,7 @@ gem 'growl', :group => [:test, :development]
 gem "rspec-rails", :group => [:test, :development]
 
 gem 'execjs'
-gem 'therubyracer'
+gem 'therubyracer', :platforms => :ruby
 
 group :development do
   # Deploy with Capistrano
