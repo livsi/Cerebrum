@@ -10,6 +10,8 @@
 
     gem install mysql2 -- --srcdir=/usr/local/mysql/include
 
+therubyracer - устанавливается в гемсет вручную
+
 
 == Welcome to Rails
 
