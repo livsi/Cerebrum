@@ -17,7 +17,7 @@ role :db,  %w{v.gevorkyan@89.255.64.49}, :primary => true
 # something that quacks like a hash can be used to set
 # extended properties on the server.
 #server '89.255.64.49', user: 'v.gevorkyan', roles: %w{web app}, my_property: :my_value
-server '89.255.64.49', user: 'v.gevorkyan'
+server '89.255.64.49', user: 'v.gevorkyan', roles: %w{web app}
 
 
 
@@ -25,11 +25,11 @@ server '89.255.64.49', user: 'v.gevorkyan'
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
 # you can see them in [net/ssh documentation](http://net-ssh.github.io/net-ssh/classes/Net/SSH.html#method-c-start)
 # set it globally
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+  set :ssh_options, {
+    #keys: %w(/home/rlisowski/.ssh/id_rsa),
+    forward_agent: false,
+    #auth_methods: %w(password)
+  }
 # and/or per server
 # server 'example.com',
 #   user: 'user_name',
