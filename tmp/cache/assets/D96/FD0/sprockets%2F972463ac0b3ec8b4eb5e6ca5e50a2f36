@@ -1,17 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1347362898.435076:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%3da39c77571f1589475fc5b56536d854I"logical_path;
-FI",active_admin/nested_menu_arrow_dark.gif;
-TI"pathname;
-FI"€/Users/livsi/.rvm/gems/ruby-1.9.3-p194@rails311/gems/activeadmin-0.5.0/app/assets/images/active_admin/nested_menu_arrow_dark.gif;
-FI"content_type;
-FI"image/gif;
-FI"
-mtime;
-FI"2012-09-10T12:53:10+04:00;
-FI"length;
-FI"70;
-FI"digest;
-F"%870cc2030202667d95c740cc07dca861I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c

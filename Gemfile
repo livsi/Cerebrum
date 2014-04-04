@@ -40,8 +40,10 @@ gem "rspec-rails", :group => [:test, :development]
 
 group :development do
   # Deploy with Capistrano
-  #gem 'capistrano'
-  #gem 'rvm-capistrano'
+  gem 'capistrano', '~> 3.1', require: false
+  gem 'capistrano-rails', '~> 1.1', require: false
+  gem 'capistrano-bundler', '~> 1.1', require: false
+  gem 'capistrano-rvm',   '~> 0.1', require: false
 
   #gem 'linecache19', '0.5.13'
   #gem 'ruby-debug-base19', '0.11.26'
