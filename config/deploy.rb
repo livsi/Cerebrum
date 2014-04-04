@@ -11,6 +11,8 @@ set :branch, "master"
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, "/srv/#{fetch(:application)}"
+set :rvm_ruby_version, "ruby-1.9.3-p194@rails311"
+
 
 # Default value for :scm is :git
 set :scm, :git
