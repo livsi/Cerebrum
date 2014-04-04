@@ -1,3 +1,5 @@
+deploy_to  = "/srv/cerebrum"
+
 rails_root = "#{deploy_to}/current"
 working_directory rails_root
 
@@ -11,7 +13,6 @@ stderr_path err_log
 stdout_path log_file
 
 
-deploy_to  = "/srv/cerebrum"
 socket_file= "#{deploy_to}/shared/unicorn.sock"
 listen socket_file, :backlog => 1024
 
